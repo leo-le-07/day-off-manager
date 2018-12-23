@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Day-off management</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}"
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome {{ user.name }}!</h1>
+      <p class="lead">to Day-off Management</p>
+    </div>
+    <h3 class="orange">Your available day-off is: {{ user.available_day_off }}</h3>
+    <div>
+      <h3>Your current request(s)</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Number Day Off</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Request To User</th>
+            <th scope="col">Status</th>
+            <th scope="col">Note From Requested User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Dec 23, 2018</td>
+            <td>2</td>
+            <td>Private business</td>
+            <td>Leader 01</td>
+            <td>Pending</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Nov 3, 2018</td>
+            <td>1</td>
+            <td>Health care checking</td>
+            <td>Leader 01</td>
+            <td>Approve</td>
+            <td>LGTM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
